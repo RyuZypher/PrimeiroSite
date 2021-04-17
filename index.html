@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br" style="background-color: darkgray;">
 	<head>
-<<<<<<< HEAD
+		<link rel="shortcut icon" type="image/x-icon" href="login-rounded-right--v2.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8">
-		<title>Primeiro site</title>
+		<title>Conversor de Anos em Dias</title>
 
 		<script>
 			function calcular()
@@ -12,7 +13,16 @@
 				document.getElementById('input').value = ""
 				
 				let result = document.getElementById('result')
-				result.innerHTML = 'Resultado: ' + numAnos * 365
+				let calculo = numAnos * 365
+				
+				if(isNaN(calculo))
+				{
+					result.innerHTML = 'Digite um número. '
+				}
+				else
+				{
+					result.innerHTML = 'Resultado: ' + calculo
+				}
 			}
 			
 			function limpar()
@@ -35,7 +45,9 @@
 			{
 				text-align: center;
 				line-height: 200%;
-				size: 1000px;
+				box-sizing: border-box;
+				width: 100%;
+				display: block;
 			}
 			
 			div
@@ -83,18 +95,30 @@
 				font-weight: bold;
 				font-size: 25px;
 			}
+			
+			.inputclass
+			{
+				text-align: center;
+				width: 500px;
+			}
+			
+			.inputclass > *
+			{
+				margin-left: 400px;
+			}
 		</style>
 	</head>
 	
 	<body>
 		<h3>Conversor de Anos em Dias</h3>
 		<div>
-			<input type="text" id="input" size="75px"  placeholder="Digite um número de anos"><br>
+			<div class="inputclass">
+				<input type="text" id="input" size="75px" type="number" inputmode="decimal" placeholder="Digite um número de anos">
+			</div>
+			<br>
 			<button class="calcular" onclick="calcular()">Calcular</button>
 			<button class="limpar" onclick="limpar()">Limpar</button><br>
 			<p id="result">Resultado: </p>
 		</div>
 	</body>
 </html>
-
-
