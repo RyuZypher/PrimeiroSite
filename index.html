@@ -45,9 +45,7 @@
 			{
 				text-align: center;
 				line-height: 200%;
-				//box-sizing: border-box;
 				width: 100%;
-				//display: block;
 			}
 			
 			div
@@ -57,7 +55,7 @@
 			
 			div > *
 			{
-				margin-top: 10px;
+				margin-top: 25px;
 				margin-bottom: 10px;
 			}
 			
@@ -99,7 +97,10 @@
 			.inputclass
 			{
 				width: 50vw;
-				transform: translateX(50%);
+				margin: auto;
+				//right: 50%;
+				//transform: translateX(50%);
+				//margin: 33%;
 			}
 			
 			.inputclass > *
@@ -113,7 +114,7 @@
 		<h3>Conversor de Anos em Dias</h3>
 		<div>
 			<div class="inputclass">
-				<input type="text" id="input" type="number" inputmode="decimal" placeholder="Digite um número de anos">
+				<input type="text" id="input" type="number" pattern="[0-9]*" inputmode="numeric" placeholder="Digite um número de anos">
 			</div>
 			<br>
 			<button class="calcular" onclick="calcular()">Calcular</button>
