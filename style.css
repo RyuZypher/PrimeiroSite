@@ -1,3 +1,7 @@
+h1 {
+    text-shadow: 2px, 2px;
+}
+
 h3 
 {
     text-align: center;
@@ -20,6 +24,10 @@ div > *
 {
     margin-top: 25px;
     margin-bottom: 10px;
+}
+
+.divPrincipal {
+    background-color: whitesmoke;   
 }
 
 button
